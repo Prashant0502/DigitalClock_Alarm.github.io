@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Alarm Clock</title>
+    <!-- Adding Logo in the Tab bar -->
+    <link rel = "icon" href ="Alarmimg.jpg" type = "image/x-icon">
+    <link rel="stylesheet" href="Style.css">
+    
+</head>
+<body>
+    <div class="Alarmbox">
+    
+    <section class="container">
+        <div class="display-time">
+            <div id="digital-clock"></div>
+        </div> 
+        <form class="Alarmset">
+            <div class="alarm-fields">
+                <input type="number" name="hours" id="hours" placeholder="HH" max="12" min="1">
+                <input type="number" name="minutes" id="minutes" placeholder="MM" max="59" min="00">
+                <input type="number" name="seconds" id="seconds" placeholder="SS" max="59" min="00"> <br>
+                <input type="radio" id="am" name="am" value="AM">
+                <label for="am">AM</label>
+                <input type="radio" id="pm" name="pm" value="PM">
+                <label for="pm">PM</label>
+            </div>
+                <div class="buttons">
+                    <button type="submit" class="set-alarm">SET ALARM </button>
+                    <button type="reset" onclick="clearAlarm()" class="clear-alarm">STOP ALARM</button>
+                </div>
+            </form> 
+        </section>
+        <hr style="margin-top: 50px; width: 350px;">
+        <section>
+            <div>
+                <h3 class="alarmlist"> ALARM LIST </h3>
+            </div>
+            <div>
+                <ul id = "alarmhistory">
+                    
+                </ul>
+            </div>
+        </section>
+        </div>
+        <script src="Script.js"></script>
+    </body>
+    </html>
